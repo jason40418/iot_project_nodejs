@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= title %></title>
+
+<%- include partials/css.ejs %>
+</head>
+
+<body>
+  <h1><%= title %></h1>
+  <p>Welcome to <%= title %></p>
+
+  <h1>Account - List</h1>
+  <table>
+    <tr>
+      <th>id</th>
+      <th>userid</th>
+      <th>password</th>
+      <th>email</th>
+    </tr>
+    <% for ( var i = 0 ; i < data.length ; i++){ %>
+    <tr>
+      <td><%= data[i].id  %></td>
+      <td><%= data[i].userid  %></td>
+      <td><%= data[i].password  %></td>
+      <td><%= data[i].email  %></td>
+    </tr>
+    <% } %>
+  </table>
+
+<%- include partials/js.ejs %>
+</body>
+
+</html>
